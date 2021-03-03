@@ -35,24 +35,25 @@ def strchr(text: str, char: str) -> str:
     if find_index != -1:
         return cuter(text, find_index)
 
-#TODO; wh have a Bug here :(
 def strcspn(text_one: str, text_tow: str) -> int:
-    def valid(char: str):
-        if not(char in "!@#$%^&*()_-+=<>,./\\[]{}'\";:`~"):
-            return True
-        else:
-            return False
+    """
+    bug is dead :D
 
+    >>> from cdef import string
+    >>> string.strcspn("the value is 3.14159", "1234567890")
+    13
+    """
     result = 0
     for i in text_one:
         find = False
         for j in text_tow:
-            if valid(i) and i == j:
+            if i == j:
                 find = True
-                break
         if not find:
             result += 1
-    return result
+        else:
+            return result
+        return result
 
 #TODO: wh have a bug here i need time for fix it
 def strstr(text: str, target: str) -> str:
