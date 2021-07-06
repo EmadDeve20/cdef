@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 
-from typing import List,Tuple
+from typing import List
 
 def get_value_with_index(arr: List, index: int):
     try:
