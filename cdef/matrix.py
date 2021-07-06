@@ -22,3 +22,11 @@ def get_indexs_with_values(arr: List, values: List) -> list:
             if arr[i] == j and i not in res:
                 res.append(i)
     return res
+
+def get_indexs_with_value(arr: List, value):
+    res = []
+    for i in range(len(arr)):
+        if arr[i] == value:
+            res.append(i)
+    return res
+    
