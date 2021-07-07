@@ -3,10 +3,29 @@
 from typing import List
 
 def get_value_with_index(arr: List, index: int):
+    """This function returns your target value in your list without IndexError!
+    If your index is out of range, it will decrease the length of the list and
+    try to return your value again.
+    
+    for example:
+    >>> get_value_with_index([1,2,3], 6)
+    >>> 1
+    
+    beacuse:
+    index:  values:
+        0       1
+        1       2
+        2       3
+        3       1
+        4       2
+        5       3
+        6       1
+    """
+
     try:
         return arr[index]
     except IndexError:
-        while index > len(arr):
+        while index >= len(arr):
             index -= len(arr)
         return arr[index]
 
